@@ -1,0 +1,41 @@
+@mixin font($font-style:normal, 
+  $font-variant:normal, 
+  $font-weight:normal, 
+  $font-size:1.6, 
+  $line-height:100%, 
+  $font-family:'arial') {
+	font:$font-style $font-variant $font-weight $font-size + rem /$line-height + rem $font-family;
+}
+
+@mixin font-size($size-value: 1.6) {
+  font-size: ($size-value * 10) + px;
+  font-size: $size-value + rem;
+}
+
+@mixin line-height($line-height: 1.1) {
+  line-height: ($line-height * 10) + px;
+  line-height: $line-height + rem;
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* font
+---------------------------------------------------------------*/
+@mixin font-size($type: 'default') {
+  @if($type == 'small') {
+    font-size: $font-size-small;
+  }
+  @if($type == 'default') {
+    font-size: $font-size-default;
+  }
+  @if($type == 'large') {
+    font-size: $font-size-large;
+  }
+  @if($type == 'xlarge') {
+    font-size: $font-size-xlarge;
+  }
+}

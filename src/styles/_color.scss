@@ -1,0 +1,34 @@
+/* scaleColor
+---------------------------------------------------------------*/
+@function scaleColor($type-color: false, $color: $color-neutral-gray, $percent: 0){
+    @if($type-color == false) {
+      @return $color;
+    }
+    @if($type-color == 'light') {
+      @return lighten($color, $percent);
+    }
+    @if($type-color == 'dark') {
+      @return darken($color, $percent);
+    }
+}
+
+/* color
+---------------------------------------------------------------*/
+@function getColor($color: $color-neutral-gray,
+    $type: 'default', $type-color: false, $percent: 0) {
+    @if($type == 'custom') {
+        @return scaleColor($type-color: $type-color, $color: $color, $percent: $percent);
+    }
+    @if($type == 'default') {
+        @return scaleColor($type-color: $type-color, $color: $color, $percent: $percent);
+    }
+    @if($type == 'primary') {
+        @return scaleColor($type-color: $type-color, $color: $color-branding-primary, $percent: $percent);
+    }
+    @if($type == 'seconday') {
+        @return scaleColor($type-color: $type-color, $color: $color-branding-secondary, $percent: $percent);
+    }
+    @if($type == 'complementary') {
+        @return scaleColor($type-color: $type-color, $color: $color-branding-complementary, $percent: $percent);
+    }
+}

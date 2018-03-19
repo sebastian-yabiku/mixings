@@ -1,0 +1,32 @@
+{
+  "name": "mixings",
+  "version": "1.0.0",
+  "description": "Mixings for sass",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+		"gulp-sass": "*",
+    "browser-sync": "*",
+    "gulp-autoprefixer": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastian-yabiku/mixings.git"
+  },
+  "keywords": [
+    "style",
+    "sass",
+    "css",
+    "mixings"
+  ],
+  "author": "sebastian yabiku",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastian-yabiku/mixings/issues"
+  },
+  "homepage": "https://github.com/sebastian-yabiku/mixings#readme"
+}
